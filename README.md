@@ -22,10 +22,12 @@
    ![image](https://github.com/PandaTofu/Install-YOLOT/assets/22908364/38d0bf52-dc90-420d-9f70-aad446c11e76)
    找到对应的CUDA版本和对应的系统，获取相应的安装命令，建议使用pip安装。注意不能安装CPU版本，必须是CUDA版本，并且Pytorch≥1.8
     ![image](https://github.com/PandaTofu/Install-YOLOT/assets/22908364/992c8a13-4c24-40c5-90a9-bf0863865b05)
-4. 安装Pytorch
+3. 安装Pytorch
    回到提示符窗口，键入上一步获取的安装命令，比如我的是：
    ```
    pip install torch==2.1.1 torchvision==0.16.1 torchaudio==2.1.1 --index-url https://download.pytorch.org/whl/cu121
    ```
 
 ### 安装gcc和g++
+1. 获取MinGW的安装工具，我将我下载的压缩包放在：
+2. 
