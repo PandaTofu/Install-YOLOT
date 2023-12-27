@@ -5,5 +5,21 @@
 ###需求
 - 系统：Windows 10或以上
 - Python ≥ 3.7 （我用的是Python 3.9.7）
-- PyTorch ≥ 1.8 和相应版本的torchvision+cuda，请参考[pytorch.org](https://pytorch.org)安装PyTorch+torchvision+cuda
-  > xxx
+- PyTorch ≥ 1.8 和相应版本的torchvision+cuda，
+- gcc & g++ ≥ 5.4
+
+###1. 安装PyTorch
+1. 查看CUDA版本
+   按下windows键盘，敲入cmd进入命令提示符窗口
+   ![image](https://github.com/PandaTofu/Install-YOLOT/assets/22908364/a49bf82f-173d-4398-bd9b-a0bf424210b6)
+   敲入nvidia-smi命令，查看CUDA版本（我的是CUDA 12.3）
+   ![image](https://github.com/PandaTofu/Install-YOLOT/assets/22908364/039c6c84-572b-4015-bad5-93df980c3d94)
+2. 安装Pytorch
+   参考[pytorch.org](https://pytorch.org)安装配套的PyTorch+torchvision+cuda
+   我的CUDA是12.3,而pytorch官网最高的是CUDA=12.1，所以只能安装最高版本的CUDA 12.1对应的Pytorch，用pip安装
+    ![image](https://github.com/PandaTofu/Install-YOLOT/assets/22908364/85eb2d46-e0ff-4bed-bf54-11786bd82311)
+   如果想查看更多版本的Pytorch，可以点击“previous versions of PyTorch”
+    ![image](https://github.com/PandaTofu/Install-YOLOT/assets/22908364/85eb2d46-e0ff-4bed-bf54-11786bd82311)
+   找到对应的CUDA版本和对应的系统，安装相应的Pytorch版本，建议使用pip安装。注意不能安装CPU版本，必须是CUDA版本，并且Pytorch≥1.8
+3. 按下windows键盘，敲入cmd进入命令提示符窗口
+
