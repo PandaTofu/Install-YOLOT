@@ -29,5 +29,10 @@
    ```
 
 ### 安装gcc和g++
-1. 获取MinGW的安装工具，我将我下载的压缩包放在：
-2. 
+1. 获取MinGW的安装工具，下载的压缩包放在：[mingw-w64-install.zip](https://github.com/PandaTofu/Install-YOLOT/blob/main/tools/mingw-w64-install.zip)
+2. 解压并双击exe的安装工具，按照提示逐步安装
+   注意安装的时候截图中的两项要根据系统调整：
+   > Architecture：32位选i686/64位选x86_64
+   > Threads：windows选择win32
+   ![image](https://github.com/PandaTofu/Install-YOLOT/assets/22908364/17a69015-f368-4790-9613-0bef60f8969b)
+3. 启动MinGW 
