@@ -35,7 +35,7 @@
    > Architecture：32位选i686/64位选x86_64
    > Threads：windows选择win32
    ![image](https://github.com/PandaTofu/Install-YOLOT/assets/22908364/17a69015-f368-4790-9613-0bef60f8969b)
-3.安装时请记下安装路径，后续设置环境变量需要
+3. 安装时请记下安装路径，后续设置环境变量需要
 4. 启动MinGW Installation Manager
 5. 左边选择All Packages->MinGW->MinGW Base System
    ![image](https://github.com/PandaTofu/Install-YOLOT/assets/22908364/13a01fb9-8c30-4af7-ba52-9fae997202ed)
