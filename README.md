@@ -8,6 +8,7 @@
 - PyTorch ≥ 1.8 和相应版本的torchvision+cuda，
 - gcc & g++ ≥ 5.4
 - Microsoft C++ ≥ 14.0
+- OpenVC和ninjia是可选（我没有安装）
 
 ### 安装PyTorch
 1. 查看CUDA版本
@@ -60,3 +61,14 @@
 <br/>![image](https://github.com/PandaTofu/Install-YOLOT/assets/22908364/a90d37d6-d420-4d17-8cc5-3e5033363e3b)
 6. 右下角点击“安装”，如需安装前可以更改安装路径
 
+### 安装Detetron2
+可以远程安装，也可以下载源码到本地进行安装，安装命令如下：
+```
+# 远程安装：
+python -m pip install 'git+https://github.com/facebookresearch/detectron2.git'
+# （如果没有权限，请添加--user参数）
+
+# 或者下载源码到本地进行安装
+git clone https://github.com/facebookresearch/detectron2.git
+python -m pip install -e detectron2
+```
