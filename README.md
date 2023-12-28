@@ -11,10 +11,10 @@
 
 ### 安装PyTorch
 1. 查看CUDA版本
-   - 按下windows键盘，敲入cmd进入命令提示符窗口
-     ![image](https://github.com/PandaTofu/Install-YOLOT/assets/22908364/a49bf82f-173d-4398-bd9b-a0bf424210b6)
-   - 敲入nvidia-smi命令，查看CUDA版本（我的是CUDA 12.3）
-     ![image](https://github.com/PandaTofu/Install-YOLOT/assets/22908364/039c6c84-572b-4015-bad5-93df980c3d94)
+   1.按下windows键盘，敲入cmd进入命令提示符窗口
+   ![image](https://github.com/PandaTofu/Install-YOLOT/assets/22908364/a49bf82f-173d-4398-bd9b-a0bf424210b6)
+   2. 敲入nvidia-smi命令，查看CUDA版本（我的是CUDA 12.3）
+   ![image](https://github.com/PandaTofu/Install-YOLOT/assets/22908364/039c6c84-572b-4015-bad5-93df980c3d94)
 2. 查找Pytorch安装命令
    - 参考[pytorch.org](https://pytorch.org)安装配套的PyTorch+torchvision+cuda
    - 我的CUDA是12.3,而pytorch官网最高的是CUDA=12.1，所以只能安装最高版本的CUDA 12.1对应的Pytorch，用pip安装
