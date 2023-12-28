@@ -131,6 +131,11 @@ python -m pip install -e detectron2
   import torch
   torch.cuda.device_count()
   ```
+  ![image](https://github.com/PandaTofu/Install-YOLOT/assets/22908364/4d4b5812-c094-4d7d-8a42-b78c6d23d04b)
+  例如，我的环境上只有1个GPU，运行命令时要指定GPU数量为1
+  ```
+  python ./tools/train_net.py --num-gpus 1 --config-file ./configs/yolof_R_50_C5_1x.yaml
+  ```
 - 测试
   ```
   python ./tools/train_net.py --num-gpus 8 --config-file ./configs/yolof_R_50_C5_1x.yaml --eval-only MODEL.WEIGHTS /path/to/checkpoint_file
