@@ -25,7 +25,9 @@
 <br/>![image](https://github.com/PandaTofu/Install-YOLOT/assets/22908364/992c8a13-4c24-40c5-90a9-bf0863865b05)
 4. 安装Pytorch
 <br/>回到提示符窗口，键入上一步获取的安装命令，比如我的是：
-<br/>`pip install torch==2.1.1 torchvision==0.16.1 torchaudio==2.1.1 --index-url https://download.pytorch.org/whl/cu121`
+   ```
+   pip install torch==2.1.1 torchvision==0.16.1 torchaudio==2.1.1 --index-url https://download.pytorch.org/whl/cu121
+   ```
 
 ### 安装gcc和g++
 1. 获取MinGW的安装工具，下载的压缩包放在：[mingw-w64-install.zip](https://github.com/PandaTofu/Install-YOLOT/blob/main/tools/mingw-w64-install.zip)
@@ -33,14 +35,20 @@
 <br/>注意安装的时候截图中的两项要根据系统调整：
    - Architecture：32位选i686/64位选x86_64
    - Threads：windows选择win32
-   ![image](https://github.com/PandaTofu/Install-YOLOT/assets/22908364/17a69015-f368-4790-9613-0bef60f8969b)
-4. 安装时请记下安装路径，后续设置环境变量的时候需要用到
-5. 启动MinGW Installation Manager
-6. 左边选择All Packages->MinGW->MinGW Base System
-   ![image](https://github.com/PandaTofu/Install-YOLOT/assets/22908364/13a01fb9-8c30-4af7-ba52-9fae997202ed)
-7. 右边勾选mingw32-gcc-bin/dev/lib + mingw32-gcc-g++-bin/dev，勾选时候点击“Mark for installation”，依赖包会自动勾选
-   ![image](https://github.com/PandaTofu/Install-YOLOT/assets/22908364/d219cfa2-964a-4f8e-94a6-c390e9824983)
-8. 上方工具栏选择Intallation->Apply Changes，过程比较漫长，如果有安装失败的包，等完成之后继续“Apply Changes”直到所有包安装完成
-   ![image](https://github.com/PandaTofu/Install-YOLOT/assets/22908364/cfbd4be0-7b25-44db-8118-412bbfeece55)
+<br/>![image](https://github.com/PandaTofu/Install-YOLOT/assets/22908364/17a69015-f368-4790-9613-0bef60f8969b)
+3. 安装时请记下安装路径，后续设置环境变量的时候需要用到
+4. 启动MinGW Installation Manager
+5. 左边选择All Packages->MinGW->MinGW Base System
+<br/>![image](https://github.com/PandaTofu/Install-YOLOT/assets/22908364/13a01fb9-8c30-4af7-ba52-9fae997202ed)
+6. 右边勾选mingw32-gcc-bin/dev/lib + mingw32-gcc-g++-bin/dev，勾选时候点击“Mark for installation”，依赖包会自动勾选
+<br/>![image](https://github.com/PandaTofu/Install-YOLOT/assets/22908364/d219cfa2-964a-4f8e-94a6-c390e9824983)
+7. 上方工具栏选择Intallation->Apply Changes，过程比较漫长，如果有安装失败的包，等完成之后继续“Apply Changes”直到所有包安装完成
+<br/>![image](https://github.com/PandaTofu/Install-YOLOT/assets/22908364/cfbd4be0-7b25-44db-8118-412bbfeece55)
+8. 启动命令提示符窗口，敲入下面的命令确认安装是否成功，并查看gcc和g++版本
+<br/>`gcc -v`
+<br/>![image](https://github.com/PandaTofu/Install-YOLOT/assets/22908364/9214a077-b6a0-4762-a5f1-62f13cb1d11b)
+<br/>`g++ -v`
+<br/>![image](https://github.com/PandaTofu/Install-YOLOT/assets/22908364/665e512e-3ae0-4e7e-8440-1797ceea4afc)
+
 
 
