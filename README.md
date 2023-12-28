@@ -72,3 +72,23 @@ python -m pip install 'git+https://github.com/facebookresearch/detectron2.git'
 git clone https://github.com/facebookresearch/detectron2.git
 python -m pip install -e detectron2
 ```
+
+### 安装mish-cuda和YOLOT
+1. 下载YOLOT源码
+   ```
+   git clone https://github.com/chensnathan/YOLOF
+   ```
+2. 进入YOLOT目录，下载mish-cuda源码并安装
+   ```
+   git clone https://github.com/thomasbrandon/mish-cuda
+   cd mish-cuda
+   python setup.py build install
+   cd ..
+   ```
+   注意：如果安装过程出现mish.h的语法错误（如void前面应有;），可以尝试将mish-cuda/csrc目录的mish.h文件替换
+   替换文件在：[mish.h](https://github.com/PandaTofu/Install-YOLOT/blob/main/tools/mish.h)
+3. 执行如下命令，安装YOLOT
+   ```
+   python setup.py develop
+   ```
+
