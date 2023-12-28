@@ -50,5 +50,13 @@
 <br/>`g++ -v`
 <br/>![image](https://github.com/PandaTofu/Install-YOLOT/assets/22908364/665e512e-3ae0-4e7e-8440-1797ceea4afc)
 
-
+### 安装Microsoft C++
+1. 先安装Microsoft C++ build tools，下载地址：[Build Tools](https://visualstudio.microsoft.com/zh-hant/visual-cpp-build-tools/?wd&eqid=ab927a7c0000230c00000004654439dc)
+2. 双击vs_BuildTools.exe安装包进行安装
+3. 安装完成后，启动VS Installer
+4. 点击“可用”，建议选择“VS Community”，并点击“安装”
+<br/>![image](https://github.com/PandaTofu/Install-YOLOT/assets/22908364/53a25477-3c7e-456f-b7ee-00b91333f50c)
+5. 在弹出的窗口里选择“通用Windows平台开发”，右侧追加选择“C++”和“Wind10/11 SDK”
+<br/>![image](https://github.com/PandaTofu/Install-YOLOT/assets/22908364/a90d37d6-d420-4d17-8cc5-3e5033363e3b)
+6. 右下角点击“安装”，如需安装前可以更改安装路径
 
