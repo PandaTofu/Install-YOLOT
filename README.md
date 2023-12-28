@@ -98,4 +98,41 @@ python -m pip install -e detectron2
 3. 将下载的预训练模型文件拷贝到`pretrained_models`文件夹
 
 ### 准备COCO数据集
-1. 在YOLOT目录下，创建
+1. 在YOLOT目录下，创建`datasets`文件夹
+2. 进入`datasets`文件夹，创建`coco`文件夹
+3. 下载COCO数据集，下载地址可在[各类图像数据下载地址](https://bendfunction.gitbook.io/dataset-download/)找到，我用的是2017的COCO数据，
+   - 图片数据（Image）：下载2017 Train/Val/Test图片数据
+     ```
+     # 2017 Train images [118K/18GB]:
+     http://images.cocodataset.org/zips/train2017.zip
+
+     # 2017 Val images [5K/1GB]:
+     http://images.cocodataset.org/zips/val2017.zip
+
+     # 2017 Test images [41K/6GB]:
+     http://images.cocodataset.org/zips/test2017.zip
+     ```
+   - 注解文件（Annotations）：下载Train/Val数据集的注解文件：
+     ```
+     # 2017 Train/Val annotations [241MB]:
+     http://images.cocodataset.org/annotations/annotations_trainval2017.zip
+     ```
+4. 解压数据集并分别拷贝`train2017`，`val2017`和`annotations`目录到`coco`文件夹里，目录结构如下：
+   ![image](https://github.com/PandaTofu/Install-YOLOT/assets/22908364/4015447b-dcf5-46e2-bad4-cf68f99af605)
+
+### 基于YOLOT进行训练或测试
+回到YOLOT目录，执行以下命令进行训练和测试
+- 训练
+  ```
+  python ./tools/train_net.py --num-gpus 8 --config-file ./configs/yolof_R_50_C5_1x.yaml
+  ```
+  注意：参数`--num-gpus`指定所用GPU数量，不能比运行环境的GPU数量多，所以执行前建议使用Python的torch库查看电脑的GPU数量：
+  ```
+  import torch
+  torch.cuda.device_count()
+  ```
+- 测试
+  ```
+  python ./tools/train_net.py --num-gpus 8 --config-file ./configs/yolof_R_50_C5_1x.yaml --eval-only MODEL.WEIGHTS /path/to/checkpoint_file
+  ```
+  同理，`--num-gpus`参数根据实际情况设置
