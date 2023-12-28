@@ -7,6 +7,7 @@
 - Python ≥ 3.7 （我用的是Python 3.9.7）
 - PyTorch ≥ 1.8 和相应版本的torchvision+cuda，
 - gcc & g++ ≥ 5.4
+- Microsoft C++ ≥ 14.0
 
 ### 安装PyTorch
 1. 查看CUDA版本
@@ -42,5 +43,4 @@
 7. 右边勾选mingw32-gcc-bin/dev/lib + mingw32-gcc-g++-bin/dev，勾选时候点击“Mark for installation”，依赖包会自动勾选
    ![image](https://github.com/PandaTofu/Install-YOLOT/assets/22908364/d219cfa2-964a-4f8e-94a6-c390e9824983)
 8. 上方工具栏选择Intallation->Apply Changes，过程比较漫长，如果有安装失败的包，等完成之后继续“Apply Changes”直到所有包安装完成
-   ![Uploading image.png…]()
 
