@@ -40,7 +40,9 @@
 4. 启动MinGW Installation Manager
 5. 左边选择All Packages->MinGW->MinGW Base System菜单
    ![image](https://github.com/PandaTofu/Install-YOLOT/assets/22908364/13a01fb9-8c30-4af7-ba52-9fae997202ed)
-7. 右边勾选mingw32-gcc-bin/dev/lib + mingw32-gcc-g++-bin/dev，勾选时候点击“Mark for installation”，依赖包会自动勾选
+6. 右边勾选mingw32-gcc-bin/dev/lib + mingw32-gcc-g++-bin/dev，勾选时候点击“Mark for installation”，依赖包会自动勾选
    ![image](https://github.com/PandaTofu/Install-YOLOT/assets/22908364/d219cfa2-964a-4f8e-94a6-c390e9824983)
-8. 上方工具栏选择Intallation->Apply Changes，过程比较漫长，如果有安装失败的包，等完成之后继续“Apply Changes”直到所有包安装完成
+7. 上方工具栏选择Intallation->Apply Changes，过程比较漫长，如果有安装失败的包，等完成之后继续“Apply Changes”直到所有包安装完成
+   ![image](https://github.com/PandaTofu/Install-YOLOT/assets/22908364/cfbd4be0-7b25-44db-8118-412bbfeece55)
+
 
