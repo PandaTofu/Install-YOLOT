@@ -93,7 +93,9 @@ python -m pip install -e detectron2
    ```
 
 ### 准备预训练模型
-1. 在YOLOT目录下，新建`pretrained_models`文件夹
+1. 在YOLOT目录下，创建`pretrained_models`文件夹
 2. 下载预训练模型，下载地址：[OneDrive](https://1drv.ms/u/s!AgM0VtBH3kV9imGxZX3n_TMQGtbP?e=YMgpGJ) 或者 [Baidu Cloud](https://pan.baidu.com/s/1BSOncRYq6HeCQ8q2hrWowA) （提取码是`qr6o`）
 3. 将下载的预训练模型文件拷贝到`pretrained_models`文件夹
 
+### 准备COCO数据集
+1. 在YOLOT目录下，创建
