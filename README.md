@@ -179,7 +179,7 @@ python -m pip install -e detectron2
        BASE_LR: 0.01
      ```
 
-**说明：上面遇到问题所修改的`YOLOF\configs\Base-YOLOF.yaml`和`YOLOF\yolof\modeling\yolof.py`均已经上传到tools目录中**
+**说明：上面遇到问题所修改的`YOLOF\configs\Base-YOLOF.yaml`和`YOLOF\yolof\modeling\yolof.py`均已经上传到tools/YOLOF目录中**
   
 
 
