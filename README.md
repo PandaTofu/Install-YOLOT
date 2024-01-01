@@ -151,7 +151,7 @@ python -m pip install -e detectron2
     比如我只有1个GPU，那么batch size就是8，配置在`YOLOF\configs\Base-YOLOF.yaml`中，修改`IMS_PER_BATCH`配置项：
     ```
     SOLVER:
-      **IMS_PER_BATCH: 8**
+      IMS_PER_BATCH: 8
     ``` 
 - 索引值所在设备不匹配
   - 错误信息：`RuntimeError: indices should be either on cpu or on the same device as the indexed tensor (cpu)`
@@ -166,7 +166,7 @@ python -m pip install -e detectron2
     # modified code to fix the issue
     src_idx = torch.cat(
             [src + idx * anchors[0].tensor.shape[0] for idx, (src, _) in
-             enumerate(indices)])**.to(self.device)**
+             enumerate(indices)]).to(self.device)
     ```
  - 学习率太大
    - 错误信息：`AssertionError: bad box: x1 larger than x2`
@@ -176,7 +176,7 @@ python -m pip install -e detectron2
      ```
      SOLVER:
        IMS_PER_BATCH: 8
-       **BASE_LR: 0.01**
+       BASE_LR: 0.01
      ```
 
 **说明：上面遇到问题所修改的`YOLOF\configs\Base-YOLOF.yaml`和`YOLOF\yolof\modeling\yolof.py`均已经上传到tools目录中**
