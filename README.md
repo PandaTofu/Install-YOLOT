@@ -148,10 +148,10 @@ python -m pip install -e detectron2
   - 错误信息：上报`torch.cuda.OutofMemory`问题
   - 可能的原因：batch size太大
   - 解决办法：默认的配置是8个GPU，batch size为64，即每个GPU每批次处理8张图片（64/8），所以根据自身环境的GPU个数，建议将batch size修改为8*N_GPU
-    比如我只有1个GPU，那么batch size就是8，配置在YOLOF\configs\Base-YOLOF.yaml中，修改`IMS_PER_BATCH`配置项：
+    比如我只有1个GPU，那么batch size就是8，配置在`YOLOF\configs\Base-YOLOF.yaml`中，修改`IMS_PER_BATCH`配置项：
     ```
     SOLVER:
-    IMS_PER_BATCH: 8
+      **IMS_PER_BATCH: 8**
     ``` 
 - 索引值所在设备不匹配
   - 错误信息：`RuntimeError: indices should be either on cpu or on the same device as the indexed tensor (cpu)`
@@ -168,5 +168,18 @@ python -m pip install -e detectron2
             [src + idx * anchors[0].tensor.shape[0] for idx, (src, _) in
              enumerate(indices)])**.to(self.device)**
     ```
+ - 学习率太大
+   - 错误信息：`AssertionError: bad box: x1 larger than x2`
+   - 原因：当batch size调小后，学习率也需要相应调小
+   - 解决方法：依然是修改配置，配置项在`YOLOF\configs\Base-YOLOF.yaml`中，修改`BASE_LR`配置项：
+     我自己修改为0.01，如下：
+     ```
+     SOLVER:
+       IMS_PER_BATCH: 8
+       **BASE_LR: 0.01**
+     ```
+
+**说明：上面遇到问题所修改的`YOLOF\configs\Base-YOLOF.yaml`和`YOLOF\yolof\modeling\yolof.py`均已经上传到tools目录中**
+  
 
 
