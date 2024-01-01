@@ -142,3 +142,31 @@ python -m pip install -e detectron2
   python ./tools/train_net.py --num-gpus 8 --config-file ./configs/yolof_R_50_C5_1x.yaml --eval-only MODEL.WEIGHTS /path/to/checkpoint_file
   ```
   同理，`--num-gpus`参数根据实际情况设置
+
+### 运行中遇到的问题
+- GPU内存不足：
+  - 错误信息：上报`torch.cuda.OutofMemory`问题
+  - 可能的原因：batch size太大
+  - 解决办法：默认的配置是8个GPU，batch size为64，即每个GPU每批次处理8张图片（64/8），所以根据自身环境的GPU个数，建议将batch size修改为8*N_GPU
+    比如我只有1个GPU，那么batch size就是8，配置在YOLOF\configs\Base-YOLOF.yaml中，修改`IMS_PER_BATCH`配置项：
+    ```
+    SOLVER:
+    IMS_PER_BATCH: 8
+    ``` 
+- 索引值所在设备不匹配
+  - 错误信息：`RuntimeError: indices should be either on cpu or on the same device as the indexed tensor (cpu)`
+  - 可能的原因：报错的代码段所使用的索引变量在CPU上，而YOLOF运行在GPU上
+  - 解决方法：将所用的torch变量设置到GPU即可，可以用`to(device)`方法。我遇到的报错代码在`YOLOF\yolof\modeling\yolof.py`的415行，所以添加如下代码：
+    ```
+    # source code
+    src_idx = torch.cat(
+            [src + idx * anchors[0].tensor.shape[0] for idx, (src, _) in
+             enumerate(indices)])
+
+    # modified code to fix the issue
+    src_idx = torch.cat(
+            [src + idx * anchors[0].tensor.shape[0] for idx, (src, _) in
+             enumerate(indices)])**.to(self.device)**
+    ```
+
+
